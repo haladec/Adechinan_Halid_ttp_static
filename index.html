@@ -1,0 +1,29 @@
+<html>
+<body>
+<html>
+<body>
+<h1> My name is Halid ADECHINAN. My hobby is to watch sport events. </h1> 
+<h2 id="tim" style= "color: blue;"></h2>
+<script>function currentTime() {
+var x = new Date()
+hours = x.getHours( ) % 12;
+hours = hours ? hours : 12; 
+x1 = add0(hours) + ":" +  add0(x.getMinutes()) + ":" +  add0(x.getSeconds()) ;
+document.getElementById('tim').innerHTML = x1;
+liveT();
+ }
+ function liveT(){
+var refresh=1000; // Refresh rate in milli seconds
+mytime=setTimeout('currentTime()',refresh)
+}
+
+function add0(i){
+if (i<10) {
+return i= "0" +i;
+}
+return i;
+}
+liveT()
+</script>
+</body>
+</html>
